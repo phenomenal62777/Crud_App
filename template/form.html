@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<form action="form" method="POST">
+{% csrf_token %}
+<section class="container col-sm-12 ">
+  <div class="row justify-content-around mt-5">
+    <div class="col-sm-8 text-center ">
+        <h3>Hamza Crud Update</h3>
+    </div>
+ 
+  <div class="row d-flex mt-5 ">
+      <div class="col-sm-12 ">
+  <div class="form-group m-5">
+    <label for="exampleFormControlInput1">Name</label>
+    <input  name="name" type="text" class="form-control" id="exampleFormControlInput1" placeholder="hamza" required value="{{stu.name}}">
+  </div>
+  <div class="form-group m-5">
+    <label for="exampleFormControlInput1">Roll</label>
+    <input  type="text" name="roll" class="form-control" id="exampleFormControlInput1" placeholder="Roll">
+  </div>
+  <div class="form-group m-5">
+    <label for="exampleFormControlInput1">City</label>
+    <input  type="text" name="city" class="form-control" id="exampleFormControlInput1" placeholder="City">
+    <div class="col text-center">
+      <button class="btn btn-primary mt-5" type="Submit">Submit</button>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</section>
+</form>
+{% endblock content %}

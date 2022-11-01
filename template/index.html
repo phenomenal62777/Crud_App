@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<section class="container">
+    <div class="row justify-content-around text-center mt-4">
+        <div class="col-sm-8">
+            <h3>Hamza Crud App</h3>
+        </div>
+    </div>
+    <div class="row justify-content-around">
+        <div class="col-sm-8">
+            <a href="form" class="btn btn-primary float-end">Add </a>
+        </div>
+    </div>
+    <div class="row justify-content-around text-center mt-4">
+        <div class="col-sm-8">
+            <table class="table table-dark table-striped">
+                <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Name</th>
+                      <th scope="col">Roll</th>
+                      <th scope="col">city</th>
+                      <th scope="col" ></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                        {% for stu in stu_data %}
+                      <th scope="row">{{forloop.counter}}</th>
+                      <td>{{stu.name}}</td>
+                      <td>{{stu.roll}}</td>
+                      <td>{{stu.city}}</td>
+                      <td>
+                      <a href="delete/{{stu.id}}" class="btn btn-danger md-sm">Delete</a>
+                      <a href="update/{{stu.id}}" class="btn btn-success md-sm">Update</a>
+                    </td>
+                    </tr>
+                        {% endfor %}
+                  </tbody>
+              </table>
+        </div>
+    </div>
+</section>
+{% endblock content %}
