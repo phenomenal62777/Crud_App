@@ -1,5 +1,3 @@
-from pyexpat import model
-from cv2 import integral
 from django.db import models
 from django.forms import CharField, IntegerField
 
